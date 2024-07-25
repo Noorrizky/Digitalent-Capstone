@@ -13,7 +13,7 @@
       .resolusi-gambar-carousel {
         position: relative;
         width: 100%;
-        padding-bottom: 31.84%;
+        padding-bottom: 41.84%;
       }
       .resolusi-gambar-carousel img {
         position: absolute;
@@ -29,7 +29,7 @@
       .resolusi-gambar-card {
         position: relative;
         width: 100%;
-        padding-bottom: 70%;
+        padding-bottom: 80%;
       }
       .resolusi-gambar-card img {
         position: absolute;
@@ -43,6 +43,49 @@
     </style>
   </head>
   <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand">BORNEO</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="?page=beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?page=daftarPaket">Daftar Paket Wisata</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?page=pesanan">Pesanan</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto"> <!-- Added ml-auto to align items to the right -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="confirmLogout(event)">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>    
+    <script>
+    function confirmLogout(event) {
+      event.preventDefault();
+      if (confirm('Apakah kamu ingin logout?')) {
+        window.location.href = '../aksi/logOut.php';
+      }
+    }
+  </script>
+    <!-- Navbar End -->
+
     <!-- Carousel Start -->
     <div
       id="carouselExampleCaptions"
@@ -133,32 +176,4 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand">BORNEO</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="?page=beranda">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?page=daftarPaket">Daftar Paket Wisata</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?page=pesanan">Pesanan</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+    
