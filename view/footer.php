@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/noor-rizky-permana-965969269/">Noor Rizky Permana</a>.</strong>
+    <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/noor-rizky-permana-965969269/" target="_blank" >Noor Rizky Permana</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0
