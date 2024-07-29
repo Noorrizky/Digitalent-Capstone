@@ -13,14 +13,6 @@
   <link rel="stylesheet" href="../assets/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../assets/AdminLTE-3.2.0/dist/css/adminlte.min.css">
-  <style>
-    body {
-  background-image: url('https://w.wallhaven.cc/full/45/wallhaven-45rxq7.jpg'), url('https://w.wallhaven.cc/full/0j/wallhaven-0jolrp.jpg'), url('https://wallhaven.cc/w/nr7l27');
-  background-size: 300px 200px; /* adjust the size to fit your images */
-  background-repeat: repeat-x, repeat-y; /* repeat horizontally and vertically */
-  background-position: center;
-}
-  </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
