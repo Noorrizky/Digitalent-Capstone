@@ -1,25 +1,14 @@
-<footer class="main-footer bg-dark text-white py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/noor-rizky-permana-965969269/" target="_blank" class="text-white">Noor Rizky Permana</a>.</strong>
-        <p>All rights reserved.</p>
-      </div>
-      <div class="col-md-6 text-md-right">
-        <div class="social-icons mb-2">
-          <a href="https://www.linkedin.com/in/noor-rizky-permana-965969269/" target="_blank" class="text-white mx-2">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="https://github.com/Noorrizky" target="_blank" class="text-white mx-2">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <div class="mb-3">
+            <a href="https://www.linkedin.com/in/noor-rizky-permana-965969269/" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/Noorrizky" target="_blank" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
         </div>
-        <div>
-          <b>Version</b> 3.2.0
+        <p>&copy; 2024 Noor Rizky Permana. All Rights Reserved.</p>
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.2.0
         </div>
-      </div>
     </div>
-  </div>
 </footer>
 
 <!-- Include Font Awesome for social media icons -->

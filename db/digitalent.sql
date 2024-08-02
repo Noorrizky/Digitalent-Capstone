@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2024 at 09:21 AM
+-- Generation Time: Aug 02, 2024 at 10:22 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `digitalent`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daftar_paket`
+--
+
+CREATE TABLE `daftar_paket` (
+  `daftar_paket_id` int(11) NOT NULL,
+  `nama_pemesanan` varchar(255) NOT NULL,
+  `nomor_hp` varchar(20) NOT NULL,
+  `tanggal_pesan` date NOT NULL,
+  `pelayanan_paket` set('Penginapan','Transportasi','Servis/Makan') NOT NULL,
+  `jumlah_peserta` int(11) NOT NULL,
+  `total_harga_paket` decimal(10,2) NOT NULL,
+  `total_jumlah_tagihan` decimal(10,2) NOT NULL,
+  `jumlah_hari` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `daftar_paket`
+--
+
+INSERT INTO `daftar_paket` (`daftar_paket_id`, `nama_pemesanan`, `nomor_hp`, `tanggal_pesan`, `pelayanan_paket`, `jumlah_peserta`, `total_harga_paket`, `total_jumlah_tagihan`, `jumlah_hari`) VALUES
+(2, 'Holoh3ro', '081254284547', '2024-08-02', 'Penginapan,Transportasi,Servis/Makan', 3, '8100000.00', '24300000.00', 3),
+(3, 'Holomyth', '081254284547', '2024-08-02', 'Penginapan,Transportasi,Servis/Makan', 5, '13500000.00', '67500000.00', 5),
+(4, 'Hololive', '081254284547', '2024-08-02', 'Penginapan,Transportasi,Servis/Makan', 50, '27000000.00', '99999999.99', 10),
+(5, 'Tes', '081234567890', '2024-08-29', 'Penginapan,Transportasi,Servis/Makan', 4, '5400000.00', '21600000.00', 2);
 
 -- --------------------------------------------------------
 
@@ -78,6 +106,12 @@ INSERT INTO `user` (`username`, `id_user`, `password`, `role`) VALUES
 --
 
 --
+-- Indexes for table `daftar_paket`
+--
+ALTER TABLE `daftar_paket`
+  ADD PRIMARY KEY (`daftar_paket_id`);
+
+--
 -- Indexes for table `pariwisata`
 --
 ALTER TABLE `pariwisata`
@@ -92,6 +126,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `daftar_paket`
+--
+ALTER TABLE `daftar_paket`
+  MODIFY `daftar_paket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pariwisata`
