@@ -146,7 +146,7 @@ if ($_GET['page'] == 'beranda') {
         ?>
         <div class="container mt-5">
             <h2>Detail Paket Perjalanan</h2>
-            <table class="table table-striped">
+            <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Nama Pemesanan</th>
@@ -155,7 +155,6 @@ if ($_GET['page'] == 'beranda') {
                         <th>Pelayanan Paket</th>
                         <th>Jumlah Peserta</th>
                         <th>Jumlah Hari</th>
-                        <th>Total Harga Paket</th>
                         <th>Total Jumlah Tagihan</th>
                     </tr>
                 </thead>
@@ -170,7 +169,6 @@ if ($_GET['page'] == 'beranda') {
                             <td><?= $row['pelayanan_paket'] ?></td>
                             <td><?= $row['jumlah_peserta'] ?></td>
                             <td><?= $row['jumlah_hari'] ?></td>
-                            <td><?= number_format($row['total_harga_paket'], 0, ',', '.') ?></td>
                             <td><?= number_format($row['total_jumlah_tagihan'], 0, ',', '.') ?></td>
                         </tr>
                         <?php
