@@ -228,6 +228,6 @@ if ($_GET['page'] == 'beranda') {
         </div>
     </div>
 </div>
-    <?php
+<?php
 }
 ?>
