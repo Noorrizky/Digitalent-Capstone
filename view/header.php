@@ -39,6 +39,27 @@
         height: 100%;
         object-fit: cover;
       }
+      .table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+
+.table-responsive > .table {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+  }
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+}
       /* Card Image End*/
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

@@ -25,7 +25,10 @@ $sql = "INSERT INTO daftar_paket (nama_pemesanan, nomor_hp, tanggal_pesan, pelay
         VALUES ('$nama_pemesanan', '$nomor_hp', '$tanggal_pesan', '$pelayanan_paket', '$jumlah_peserta', '$jumlah_hari', '$total_harga_paket', '$total_jumlah_tagihan')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Data successfully saved";
+    echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;'>
+            Data Berhasil dibuat.
+            <a href='../view/display.php?page=daftarPaket'>Kembali ke Halaman</a>
+        </div>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
