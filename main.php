@@ -136,5 +136,97 @@ if ($_GET['page'] == 'beranda') {
     }
     </script>
 <?php
+// PAGE PESANAN ======================================================================================
+} elseif ($_GET['page'] == 'pesanan') {
+    $query = "SELECT * FROM daftar_paket";
+    $result = $db->query($query);
+
+    if ($result->num_rows > 0) {
+        ?>
+<div class="container mt-5">
+  <h2>Detail Paket Perjalanan</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Id Pemesanan</th>
+          <th>Nama Pemesanan</th>
+          <th>Nomor HP</th>
+          <th>Tanggal Pesan</th>
+          <th>Pelayanan Paket</th>
+          <th>Jumlah Peserta</th>
+          <th>Jumlah Hari</th>
+          <th>Total Jumlah Tagihan</th>
+          <th>Edit Hapus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php while ($d = $result->fetch_assoc()) { ?>
+          <tr>
+            <td><?php echo $d['daftar_paket_id'] ?></td>
+            <td><?php echo $d['nama_pemesanan'] ?></td>
+            <td><?php echo $d['nomor_hp'] ?></td>
+            <td><?php echo $d['tanggal_pesan'] ?></td>
+            <td><?php echo $d['pelayanan_paket'] ?></td>
+            <td><?php echo $d['jumlah_peserta'] ?></td>
+            <td><?php echo $d['jumlah_hari'] ?></td>
+            <td><?php echo number_format($d['total_jumlah_tagihan'], 0, ',', '.') ?></td>
+            <td>
+            <a href="aksi/hapusPesanan.php?id=<?php echo $d['daftar_paket_id']; ?>" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
+            <a href="?page=pesanan_form_edit&id=<?php echo $d['daftar_paket_id']; ?>" class="btn btn-warning">Edit</a>
+            </td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+        <?php
+    } else {
+        echo "<div class='container mt-5'>Tidak ada data untuk ditampilkan.</div>";
+    }
+
+
+    // PAGE FORM EDIT --------------------------------------------------------------------------------------------------------------------
+}else if ($_GET['page'] == 'pesanan_form_edit') {
+    $id = $_GET['id'];
+    $hasil = $db->query("SELECT * FROM daftar_paket WHERE daftar_paket_id = '$id'");
+
+    if (!$hasil) {
+        echo "Ada masalah " . $db->error;
+        exit;
+    }
+
+    $d = $hasil->fetch_assoc();
+    ?>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Edit Pesanan</div>
+                <div class="card-body">
+                    <form action="aksi/pesanan_edit_simpan.php" method="post">
+                        <div class="form-group">
+                            <label for="daftar_paket_id">Id Pesanan</label>
+                            <input type="text" name="daftar_paket_id" value="<?php echo $d['daftar_paket_id']?>" readonly class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama_pemesanan">Nama Pesanan</label>
+                            <input type="text" name="nama_pemesanan" value="<?php echo $d['nama_pemesanan']?>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nomor_hp">Nomor hp</label>
+                            <input type="text" name="nomor_hp" value="<?php echo $d['nomor_hp']?>" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
 }
 ?>
+

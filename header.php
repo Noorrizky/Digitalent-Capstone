@@ -66,15 +66,34 @@
           <li class="nav-item">
             <a class="nav-link" href="?page=daftarPaket">Daftar Paket Wisata</a>
           </li>
+
+          <?php if(!(empty($_SESSION['username']) || empty($_SESSION['password']))) {?>
           <li class="nav-item">
-            <a class="nav-link" href="view/display.php?page=pesanan">Pesanan</a>
+            <a class="nav-link" href="?page=pesanan">Pesanan</a>
           </li>
+          <?php }?>
+
         </ul>
-        <ul class="navbar-nav ml-auto"> <!-- Added ml-auto to align items to the right -->
+
+        <ul class="navbar-nav ml-auto">
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])) { ?>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="confirmLogout(event)">Logout</a>
+          </li>
+        <?php } else { ?>
           <li class="nav-item">
             <a class="nav-link" href="login/login.php">Login</a>
           </li>
-        </ul>
+        <?php } ?>
+      </ul>
+      <script>
+        function confirmLogout(event) {
+          event.preventDefault();
+          if (confirm('Apakah kamu ingin logout?')) {
+            window.location.href = 'aksi/logOut.php';
+          }
+        }
+      </script>
       </div>
     </nav>      
     <!-- Navbar End -->

@@ -7,7 +7,7 @@
     } else {
         echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;'>
             Data Berhasil dihapus.
-            <a href='../view/display.php?page=pesanan'>Kembali ke Halaman Pesanan</a>
+            <a href='../display.php?page=pesanan'>Kembali ke Halaman Pesanan</a>
         </div>";
     }
 ?>

@@ -16,7 +16,7 @@ if ($d && $d['password'] == $pass) {
     $_SESSION['username'] = $d['username'];
     $_SESSION['password'] = $pass;
     
-    header('location:../view/display.php?page=beranda');
+    header('location:../display.php?page=beranda');
     exit();
 } else {
     // Username atau Password Salah

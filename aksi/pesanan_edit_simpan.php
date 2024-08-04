@@ -13,7 +13,7 @@ if(!$db)
 else
     echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;'>
     Data berhasil diubah.
-    <a href='../view/display.php?page=pesanan'>Kembali ke Halaman</a>
+    <a href='../display.php?page=pesanan'>Kembali ke Halaman</a>
     </div>";
 ?>
 

@@ -27,7 +27,7 @@ $sql = "INSERT INTO daftar_paket (nama_pemesanan, nomor_hp, tanggal_pesan, pelay
 if ($conn->query($sql) === TRUE) {
     echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;'>
             Data Berhasil dibuat.
-            <a href='../view/display.php?page=daftarPaket'>Kembali ke Halaman</a>
+            <a href='../display.php?page=daftarPaket'>Kembali ke Halaman</a>
         </div>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
