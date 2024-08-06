@@ -13,7 +13,7 @@
       .resolusi-gambar-carousel {
         position: relative;
         width: 100%;
-        padding-bottom: 41.84%;
+        padding-bottom: 26.84%;
       }
       .resolusi-gambar-carousel img {
         position: absolute;
@@ -39,14 +39,43 @@
         height: 100%;
         object-fit: cover;
       }
+      .navbar-custom {
+      background-color: #66B2FF;
+      font-weight: bold;
+      }
       /* Card Image End*/
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    
+
+    <!-- Carousel Start -->
+<div
+  id="carouselExampleCaptions"
+  class="carousel slide carousel-fade"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <div class="resolusi-gambar-carousel">
+        <img
+          src="https://img.okezone.com/content/2021/08/04/406/2450521/menikmati-pesona-alam-pegunungan-meratus-melalui-tour-de-loksado-2021-xB4dPK3Ruq.JPG"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>The Legend of Borneo</h5>
+        <!-- <p>Some representative placeholder content for the first slide.</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Carousel End -->
+
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand">BORNEO</a>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
       <button
         class="navbar-toggler"
         type="button"
@@ -97,95 +126,3 @@
       </div>
     </nav>      
     <!-- Navbar End -->
-
-    <!-- Carousel Start -->
-    <div
-      id="carouselExampleCaptions"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="4000">
-          <div class="resolusi-gambar-carousel">
-            <img
-              src="https://img.okezone.com/content/2021/08/04/406/2450521/menikmati-pesona-alam-pegunungan-meratus-melalui-tour-de-loksado-2021-xB4dPK3Ruq.JPG"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>The Legend of Borneo</h5>
-            <!-- <p>Some representative placeholder content for the first slide.</p> -->
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <div class="resolusi-gambar-carousel">
-            <img
-              src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTz24H7DYr1jIBr39a90E_qwGxHNO3ZPMEyq5R4WHXa9XFV9k8zIn4zv98ksnbtY1-w5KiATebb_UB7rCWNW_Vpp8sv8QI-fzJx4vneom4"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>The Legend of Borneo</h5>
-            <!-- <p>Some representative placeholder content for the second slide.</p> -->
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <div class="resolusi-gambar-carousel">
-            <img
-              src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTWQ0xZ7sXbyAG3vDkBS5Kf7QVCjdmBaG9VORg9VLWyJMtUCIB39zn6Qfn5djG9xL4VDu2pQSbltA0ozwrP68_YnqYnhBjWV0vQze27y94"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>The Legend of Borneo</h5>
-            <!-- <p>Some representative placeholder content for the third slide.</p> -->
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Carousel End -->
-
-    
