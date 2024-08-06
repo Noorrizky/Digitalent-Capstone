@@ -26,7 +26,7 @@ if ($_GET['page'] == 'beranda') {
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= $row['nama'] ?></h5>
                                 <p class="card-text"><?= $row['deskripsi'] ?></p>
-                                <a href="<?= $row['link_video'] ?>" class="btn btn-primary" target="_blank">Informasi Lebih Lanjut</a>
+                                <a href="display.php?page=daftarPaket" class="btn btn-primary">Informasi Lebih Lanjut</a>
                             </div>
                         </div>
                     </div>
